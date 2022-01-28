@@ -1,0 +1,71 @@
+//convert the program doubleo 3 functions.  At least two functions have pass by reference.
+//Turn in a prdouble out at the end of class
+//
+//Glen McIntosh
+//1-28-2022
+//In-class activity 
+
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+void getPrices(double& price1, double& price2);
+void calculateDiscount(double& price2, double& price1);
+double calculateTotal(double price1, price2);
+
+	
+int main ()
+{
+	cout << "starting program\n";
+	double price1, price2;
+	double total;
+	getPrices(price1, price2);
+
+	
+	
+	
+	cout<<"the total is "<< total;
+	cout <<"done ";
+	system("PAUSE");
+	return 0;		
+
+	void getPrices(double& price1, double& price2)
+	{
+
+		cout << "please enter the price for the item: ";
+		cin >> price1;
+		cout << "please enter the price for the item: ";
+		cin >> price2;
+	}
+	void calculateDiscount(double& price2, double& price1)
+	{
+		if (price1 < price2)
+		{
+			cout << "You get a discount on the most expensive item" << endl;
+			price2 = double(price2 / 0.8);
+			//price2 = double(price2 - (price2 * 0.20));
+		}
+		else
+		{
+			price1 = double(price1 * 0.8);
+		}
+	}
+	/// <summary>
+	/// ads two prices 
+	/// </summary>
+	/// <param name="price1">count of first item </param>
+	/// <param name="price2">count of second item</param>
+	/// <param name=""></param>
+	/// <returns></returns>
+	double calculateTotal(double price1, price2)
+	{
+		double total = price1 + price2;
+
+		return total;
+	}
+
+
+	
+}
+//problems 
